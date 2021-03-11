@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Mochila">
+   <children>
+      <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="56.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="360.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="56.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="360.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="boton" disable="true" layoutX="36.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#volverPokemons" text="Atrás" />
+      <Label fx:id="label1" layoutX="360.0" layoutY="344.0" text="Label" />
+      <Button fx:id="curar1" layoutX="106.0" layoutY="127.0" mnemonicParsing="false" onMouseClicked="#curar10PS" text="Curar 10 PS" />
+      <Button fx:id="curar2" layoutX="348.0" layoutY="127.0" mnemonicParsing="false" onMouseClicked="#curar20PS" text="Curar 20 PS" />
+      <Button fx:id="curar3" layoutX="101.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#curar10VidMax" text="Curar 10% PS" />
+      <Button fx:id="curar4" layoutX="344.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#curar20VidMax" text="Curar 20% PS" />
+      <ImageView fitHeight="100.0" fitWidth="125.0" layoutX="90.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Potion.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="125.0" layoutX="337.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/superpocion.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="125.0" layoutX="95.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Hiperpocion.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="125.0" layoutX="337.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/MaxPotion.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
