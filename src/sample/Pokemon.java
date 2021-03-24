@@ -1,9 +1,13 @@
 package sample;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 public class Pokemon {
 
     String nombre="";
     Integer vida=0;
+    Boolean sexo=false;
+    String detalles="";
 
 
     public String getNombre() {
@@ -23,6 +27,16 @@ public class Pokemon {
         this.vida = vida;
     }
 
+    public boolean getSexo(){return sexo;}
 
+    public void setSexo(Boolean sexo){this.sexo=sexo;}
+
+    public String getDetalles() {
+        return detalles;
+    }
+
+    public void setDetalles(String detalles) {
+        this.detalles = detalles;
+    }
 
 }

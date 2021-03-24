@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 
 <GridPane alignment="center" hgap="10" prefHeight="506.0" prefWidth="491.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
@@ -69,13 +67,32 @@
                   <ColorAdjust hue="-0.5" />
                </effect></ProgressBar>
             <Button fx:id="but1" layoutX="28.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#onClickBut1" text="Curar" />
+            <Button layoutX="189.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#onClickBut2" text="Detalles" />
             <Button layoutX="359.0" layoutY="305.0" mnemonicParsing="false" text="Salir" />
             <Label fx:id="txt1" layoutX="14.0" layoutY="21.0" text="Infernape" />
+            <ImageView fx:id="fav1" fitHeight="30" fitWidth="50" layoutX="103.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" visible="false"><image>
+               <Image url="@../images/estrella.png" />
+            </image></ImageView>
             <Label fx:id="txt2" layoutX="163.0" layoutY="21.0" text="Luxray" />
+            <ImageView fx:id="fav2" fitHeight="30" fitWidth="50" layoutX="383.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" visible="false"><image>
+               <Image url="@../images/estrella.png" />
+            </image></ImageView>
             <Label fx:id="txt3" layoutX="297.0" layoutY="21.0" text="Garchomp" />
+            <ImageView fx:id="fav3" fitHeight="30" fitWidth="50" layoutX="249.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" visible="false"><image>
+               <Image url="@../images/estrella.png" />
+            </image></ImageView>
             <Label fx:id="txt4" layoutX="21.0" layoutY="157.0" text="Starraptor" />
+            <ImageView fx:id="fav4" fitHeight="30" fitWidth="50" layoutX="105.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" visible="false"><image>
+               <Image url="@../images/estrella.png" />
+            </image></ImageView>
             <Label fx:id="txt5" layoutX="158.0" layoutY="157.0" text="Zoroark" />
+            <ImageView fx:id="fav5" fitHeight="30" fitWidth="50" layoutX="383.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" visible="false"><image>
+               <Image url="@../images/estrella.png" />
+            </image></ImageView>
             <Label fx:id="txt6" layoutX="297.0" layoutY="157.0" text="Tyranitar" />
+            <ImageView fx:id="fav6" fitHeight="30" fitWidth="50" layoutX="249.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" visible="false"><image>
+               <Image url="@../images/estrella.png" />
+            </image></ImageView>
          </children></AnchorPane>
    </children>
 </GridPane>

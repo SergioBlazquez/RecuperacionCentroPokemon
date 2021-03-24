@@ -3,8 +3,11 @@ package sample;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class Mochila {
@@ -14,8 +17,9 @@ public class Mochila {
 
     public Pokemon pokemon;
 
-    @FXML
-    public Label label1;
+   @FXML
+   Label label1;
+
     @FXML
     Button boton;
 
@@ -44,12 +48,13 @@ public class Mochila {
     public boolean fullVida(){
 
         if(vidaActual<vidaMax) {
-            boton.setEnabled(false);
+
+            boton.setDisable(true);
             return false;
 
         }else {
 
-            boton.setEnabled(true);
+            boton.setDisable(false);
             return true;
         }
 
@@ -58,9 +63,19 @@ public class Mochila {
     @FXML
     public void volverPokemons() throws IOException {
 
+        //No me da tiempo a cambiarlo pero esto lo que hace es abrir una pesataña completamente nueva y tendría que modificarlo para que se cambie la pantalla anterior
+
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("sample.fxml"));
         Parent parent = loader.load();
+
+        Stage primaryStage = new Stage();
+        Scene scene = new Scene(parent);
+
+        primaryStage.setTitle("Pokemons");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
 
     }
 
@@ -69,25 +84,37 @@ public class Mochila {
 
     public void curar10PS() {
         vidaActual = vidaActual + 10;
+        actualizarVida();
 
     }
 
     public void curar20PS() {
         vidaActual = vidaActual + 20;
+        actualizarVida();
 
     }
 
     public void curar10VidMax() {
         vidaActual = (int) (vidaActual + Math.round(vidaMax * 0.1));
+        actualizarVida();
 
     }
 
     public void curar20VidMax() {
         vidaActual = (int) (vidaActual + Math.round(vidaMax * 0.2));
+        actualizarVida();
 
     }
 
+    public void actualizarVida(){
+        if(vidaActual<vidaMax)
+        label1.setText(pokemon.getNombre() + " está a " + vidaActual + " PS");
+        else{
+            label1.setText(pokemon.getNombre() + " está a " + vidaMax + " PS (Vida Máxima)");
+            boton.setDisable(false);
+        }
 
+    }
 
 
 

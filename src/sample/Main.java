@@ -17,6 +17,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
 
+        //Ya no deberia pasar pero cada vez que modifico/reinicio un fxml se me coloca automaticamente(al menos en el PC de clase la 11.0, cambiarla por la 8:  xmlns="http://javafx.com/javafx/8")
+
 
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Pokemons");
